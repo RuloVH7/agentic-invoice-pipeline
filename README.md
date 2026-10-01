@@ -8,8 +8,6 @@
 
 An end-to-end intelligent automation pipeline built with **UiPath**, combining traditional RPA (REFramework), Orchestrator-driven orchestration, Action Center human-in-the-loop governance, and an **AI agent** that reasons over live vendor history to detect anomalous invoices — instead of relying on a fixed threshold.
 
-Built as a self-directed portfolio project, originally to prepare for a Senior Automation Engineer interview, and extended afterward into a more complete, genuinely unattended system.
-
 ---
 
 ## What it does
