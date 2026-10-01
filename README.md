@@ -8,6 +8,8 @@
 
 An end-to-end intelligent automation pipeline built with **UiPath**, combining traditional RPA (REFramework), Orchestrator-driven orchestration, Action Center human-in-the-loop governance, and an **AI agent** that reasons over live vendor history to detect anomalous invoices — instead of relying on a fixed threshold.
 
+Built as a self-directed portfolio project, originally to prepare for a Senior Automation Engineer interview, and extended afterward into a more complete, genuinely unattended system.
+
 ---
 
 ## What it does
@@ -98,6 +100,37 @@ flowchart TD
 
 ---
 
+## Screenshots
+
+**Orchestrator — processes published and ready**
+<img src="uipath_images/automations.png" width="700">
+
+**Dispatcher — automated folder detection, no manual file selection**
+<img src="uipath_images/automatedDispatcher.png" width="700">
+
+**Time Trigger — runs the Dispatcher unattended, on a schedule**
+<img src="uipath_images/trigger.png" width="700">
+
+**Performer — REFramework consumer, built on UiPath Studio**
+<img src="uipath_images/transactionsPerformer.png" width="700">
+
+**Queue Trigger — starts the Performer the moment new items arrive**
+<img src="uipath_images/queueTrigger.png" width="700">
+
+**Orchestrator queue — transactions processed end to end**
+<img src="uipath_images/queueData.png" width="700">
+
+**AI Agent — risk reasoning over live vendor history**
+<img src="uipath_images/agent.png" width="700">
+
+**Action Center — human approval for a High-risk invoice**
+<img src="uipath_images/approval.png" width="700">
+
+**Supabase — vendor history and audit log**
+<img src="uipath_images/supabase.png" width="700">
+
+---
+
 ## Repository structure
 
 ```
@@ -108,7 +141,16 @@ flowchart TD
 /docs/
   agent-prompt.pdf          → System + user prompt used in Agent Builder, with a short explanation of the input/output schema (the agent itself can't be exported/versioned like a normal file, so this documents its design)
   architecture-notes.pdf    → Longer write-up of the design decisions above, if kept separate from this README
-  screenshots/              → Orchestrator queue view, Action Center task, agent reasoning output, final Excel report
+/uipath_images/
+  automations.png            → Orchestrator processes
+  automatedDispatcher.png    → Dispatcher: folder-based detection
+  trigger.png                → Time Trigger (Dispatcher)
+  transactionsPerformer.png  → Performer (REFramework)
+  queueTrigger.png           → Queue Trigger (Performer)
+  queueData.png              → Orchestrator queue, processed transactions
+  agent.png                  → Agent risk reasoning
+  approval.png                → Action Center approval task
+  supabase.png                → Vendor history / audit log
 ```
 
 > **Not included:** the deployed Agent Builder agent itself (it lives in Studio Web / Orchestrator, not as a portable file), and any real API keys/Credential Assets — those are referenced by name only, following the Orchestrator Asset pattern described above.
