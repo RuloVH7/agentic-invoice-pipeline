@@ -124,6 +124,7 @@ flowchart TD
 **Action Center — human approval for a High-risk invoice**
 <img src="uipath_images/approval.png" width="700">
 
+
 **Supabase — vendor history and audit log**
 <img src="uipath_images/supabase.png" width="700">
 
