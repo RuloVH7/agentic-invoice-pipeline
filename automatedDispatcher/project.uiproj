@@ -1,0 +1,6 @@
+{
+  "Name": "automatedDispatcher",
+  "ProjectType": "Process",
+  "Description": "Automated dispatcher who reads the files available in the selected the folder to send all the data to the queue.",
+  "MainFile": "Main.xaml"
+}
